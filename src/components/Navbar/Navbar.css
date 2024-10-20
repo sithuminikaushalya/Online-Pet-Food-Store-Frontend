@@ -1,0 +1,121 @@
+.Navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #66cc99;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  color: #f1f2f3;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.Logo2 {
+  width: 102px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 0;
+  display: flex;
+  margin-left: 8.5px;
+}
+
+.Navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 65px;
+  font-size: 20px;
+}
+
+.Navbar-menu a,
+.Navbar-menu li,
+.Navbar button {
+  color: #f1f2f3;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+.Navbar-menu a:hover,
+.Navbar-menu li:hover,
+.Navbar button:hover {
+  border-bottom: 3.5px solid #eb9e34;
+}
+
+.Navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.Carticon {
+  width: 40px; /* Reduce the width */
+  height: auto; /* Reduce the height */
+  margin-right: -25px;
+  display: flex;
+  cursor: pointer;
+}
+
+.active {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eb9e34;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 400px; /* Adjust maximum width as needed */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  cursor: pointer;
+  background-color: #66cc99;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px; /* Space between buttons */
+  border-radius: 6px;
+  width: 80px; /* Adjust width of buttons */
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #4caf50;
+}
+
+.modal-content .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

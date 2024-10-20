@@ -1,0 +1,85 @@
+/* Prevent horizontal scrolling caused by overflow */
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  .dog-products {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px; /* Ensure content is below the fixed header */
+    font-family: Arial, sans-serif;
+    background-color: #003366; /* Change background color */
+  }
+  
+  .welcomedog-section {
+    background-color: #f0f0f0f2; /* Set background color to white */
+    position: relative; /* Set relative positioning */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 98.6%;
+    height: 595px;
+}
+
+.welcomedog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/dogpaw.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire section */
+    opacity: 0.11; /* Set transparency level */
+    z-index: 0; /* Ensure the overlay is behind the text */
+    border-radius: 8px; /* Match the border-radius of the section */
+}
+  
+  .welcomedog-text {
+    flex: 1.12; 
+    font-weight: 500;/* Takes up remaining space */
+    padding: 20px;
+    text-align: justify; /* Justify the paragraph */
+  }
+  
+  .welcomedog-image {
+    position: relative; /* Ensure image is above the overlay */
+    flex: 0.7; /* Takes up remaining space */
+    z-index: 2; /* Ensure image is above the overlay */
+  }
+  
+  .welcomedog-image img {
+    max-width: 106%; /* Ensures image is responsive */
+    height: auto;
+    margin-left: 20px; 
+    margin-bottom: -44px;/* Adjusted margin for other images */
+  }
+  
+  .welcomedog-section .title {
+    font-size: 3em;
+    margin-top: -50px;
+    margin-bottom: 10px;
+    color: purple;
+    text-align: left; /* Adjust alignment as needed */
+  }
+  
+  .welcomedog-section .description {
+    line-height: 1.6;
+    color: black;
+    margin-top: 40px;
+    text-align: justify; 
+    font-size: larger;
+  }
+  

@@ -1,0 +1,76 @@
+body {
+    background-color: #f0f0f0f2;
+    margin: 0;
+    padding: 0;
+}
+
+
+.ExploreFood h1{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ExploreFoodList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    flex-direction: row;
+
+}
+
+.ExpolreFoodListItems{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.ExploreFoodListItems img{
+    width: 600px;
+    height: auto;
+    min-width: 80px;
+    cursor:pointer;
+    transition: 0.2s;
+    object-fit: cover;
+    flex: 1;
+     
+    margin-left: 100px;
+
+}
+
+.ExploreFoodListItems p{
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button2{
+border: none;
+background-color: #ffd700;
+color: black;
+padding: 1vw 2.3vw;
+border-radius: 40px;
+margin-bottom: 10px;
+cursor: pointer;
+display: block;
+margin: 0 auto;
+font-size: 15px;
+font-weight: 500;
+border: #000000 solid 2px;
+width: 180px;
+}
+
+.button2:hover{
+    background-color: #eb9e34;
+    transition: 0.2s;
+}

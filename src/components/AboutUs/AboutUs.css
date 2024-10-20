@@ -1,0 +1,69 @@
+.about-us-container {
+    padding: 40px 20px;
+    max-width: auto; /* Consider setting a specific max-width if needed */
+    margin: 0 auto;
+    background-color: #003366;
+  }
+  
+  .about-us-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8em; /* Adjust font size as needed */
+    color: #ffffff; /* White color for the title */
+  }
+  
+  .about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .about-us-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 120px;
+    margin-top: -130px;
+  }
+  
+  .about-us-text {
+    flex: 1;
+    font-size: 1.35em;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 50%;
+  }
+  .about-us-text p {
+    text-align: justify; /* Align paragraphs with justified text */
+    margin-bottom: 10px;
+    margin-right: 160px; /* Add space between paragraphs */
+  }
+  
+  .about-us-text p {
+    margin-bottom: 20px;
+  }
+  
+  .button{
+    border: none;
+    background-color: #ffd700;
+    color: black;
+    padding: 1vw 2.3vw;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 500;
+    border: #000000 solid 2px;
+    width: 170px;
+    margin-right: 157px;
+    }
+    
+    .button:hover{
+        background-color: #eb9e34;
+        transition: 0.2s;
+    }

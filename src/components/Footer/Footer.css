@@ -1,0 +1,61 @@
+.Footer{
+    background-color: #66cc99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px ;
+    padding-top: 20px;
+    align-content: center;
+    padding-bottom: 20px;
+    
+}
+
+ 
+
+.Footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 0;
+}
+
+.Footer-content li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: white;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.Footer-content h2 {
+    color: white;
+    font-size: 2.6em;
+}
+
+.Social-icons{
+    width: 40px;
+    height: auto;
+    margin-right: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+
+}
+
+.fb,.ig,.linkedin{
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.Footer-copyright{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+}

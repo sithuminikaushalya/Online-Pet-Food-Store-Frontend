@@ -1,0 +1,99 @@
+.Header-content {
+  margin-top: 100px;
+  background-size: contain;
+  position: relative;
+  background-color: #003366;
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  bottom: 5%;
+}
+
+.Headerimg {
+  margin-left: 75px;
+  width: auto;
+  height: auto;
+  max-width: 405px;
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+.Upper-side {
+  background-color: #f0f0f0f2; /* Set background color to white */
+  position: relative; /* Set relative positioning */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  border-width: 5cap;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+  max-width: 96%;
+}
+
+.Upper-side::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/catpaw.png') no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire section */
+  opacity: 0.12; /* Set transparency level */
+  z-index: 0; /* Ensure the overlay is behind the text */
+  border-radius: 8px; /* Match the border-radius of the section */
+}
+
+.Upper-side .description {
+ 
+  flex: 1; 
+  font-weight: 600;/* Takes up remaining space */
+  padding: 20px;
+  text-align: center; /* Justify the paragraph */
+  font-size: 3.6em;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  max-width: 900px;
+  color: purple;
+}
+
+.Upper-side p {
+  color: #ffffff;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 140px;
+  margin-right: 40px;
+}
+
+.Bottom-side {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center; /* Align items horizontally in the center */
+  text-align: center; /* Align text center for h1 */
+}
+
+.Bottom-side h1 {
+  font-size: 38px;
+  color: #ffd700;
+  margin-bottom: 10px; /* Adjust margin as needed */
+  max-width: 70%; /* Set maximum width to control line length */
+  white-space: normal;
+  margin-right: 360px;
+  margin-top: 60px; /* Allow text to wrap */
+}
+
+.HomeBottomImg {
+  display: block;
+  width: auto;
+  height: 26%;
+  position: absolute;
+  bottom: -20px;
+  right: 50px;
+}
