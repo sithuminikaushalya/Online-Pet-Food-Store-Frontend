@@ -1,6 +1,125 @@
-.ExploreFood hr{
-    margin: 10px 0px;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
+.place-order{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 150px;
+    margin-bottom: 70px;
+}
+
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+    padding-left: 50px;
+}
+
+.place-order-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-color: #c5c5c5;
+}
+
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right{
+    width: 100%;
+    max-width: max(40%,500px);
+    padding-right: 50px;
+}
+
+.place-order .cart-total button{
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        gap: 30px;
+    }
+
+    .place-order-left, .place-order-right {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+    }
+
+    .place-order-left .title {
+        font-size: 24px;
+    }
+
+    .place-order .cart-total button {
+        width: 100%; /* Full width button */
+    }
+    .place-order button {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .place-order .quantity-input {
+        width: 60px; /* Adjust input width */
+    }
+    .place-order {
+        margin: 50px 15px; /* Adjust margin for smaller screens */
+    }
+
+    .place-order button,
+    .place-order .quantity-input {
+        width: calc(100% - 30px); /* Slightly smaller width for smaller screens */
+    }
+    .cart-total-details {
+        width: 70%; /* Ensure full width on smaller screens */
+    }
+}
+
+/* Mobile view adjustments (max-width 480px) */
+@media (max-width: 480px) {
+    .place-order-left .title {
+        font-size: 20px;
+    }
+
+    .place-order-left input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .place-order .cart-total button {
+        font-size: 13px; /* Adjust button text size */
+        padding: 10px 15px;}
+    
+        .place-order button {
+            font-size: 13px; /* Adjust button text size */
+            padding: 10px 20px; /* Adjust button padding */
+        }
+    
+        .place-order .quantity-input {
+            font-size: 0.9rem; /* Smaller font size for input */
+        }
+         .place-order {
+        margin: 20px 10px; /* Minimal margin for very small devices */
+    }
+    
+        .place-order button,
+        .place-order .quantity-input {
+            width: calc(100% - 20px); /* Full width minus minimal edge spacing */
+            padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+    .cart-total-details {
+        flex-direction: column; /* Stack items for very small screens */
+        width: 70%; /* Ensure it takes full width */
+    }
+
+    .cart-total button {
+        width: 70%; /* Make button full width */
+}
+
 }

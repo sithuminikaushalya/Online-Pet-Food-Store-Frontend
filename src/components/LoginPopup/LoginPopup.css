@@ -96,3 +96,60 @@
     margin-right: 10px;
     margin-top: 5px;
   }
+
+  @media (max-width: 768px) {
+    .login-popup-container {
+      max-width: 350px; /* Slightly reduce the width for smaller devices */
+      padding: 15px;
+    }
+  
+    .login-popup-inputs input {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .close-icon {
+      width: 20px; /* Adjust size for smaller screens */
+      height: 20px;
+    }
+  }
+  
+  /* Mobile View (max-width: 480px) */
+  @media (max-width: 480px) {
+    .login-popup-container {
+      max-width: 300px;
+      padding: 10px;
+    }
+  
+    .login-popup-title {
+      font-size: 1.2em;
+    }
+  
+    .login-popup-inputs input {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .additional-options {
+      margin-top: 15px;
+    }
+  
+    .terms-checkbox input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  
+    .close-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }

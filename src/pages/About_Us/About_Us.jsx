@@ -3,7 +3,7 @@ import './About_Us.css';
 import { assets } from '../../assets/assets.js';
 
 const About_Us = () => {
-  console.log('Image sources:', assets.dogcat, assets.dogcathover); // Debug log
+  console.log('Image sources:', assets.dogcat, assets.dogcathover); 
 
   return (
     <div className="about-us-container">

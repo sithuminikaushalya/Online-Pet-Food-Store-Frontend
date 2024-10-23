@@ -10,29 +10,44 @@ import LoginPopup from './components/LoginPopup/LoginPopup.jsx';
 import About_Us from './pages/About_Us/About_Us.jsx';
 import DogProducts from './pages/DogProducts/DogProducts.jsx';
 import CatProducts from './pages/CatProducts/CatProducts.jsx';
+import ProductDetails from './pages/ProductDetails/ProductDetails.jsx';
+import Verify from './pages/Verify/Verify.jsx';
+import MyOrders from './pages/MyOrders/MyOrders.jsx';
+import axios from 'axios';
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+   
 
   useEffect(() => {
     fetchUserData();
   }, []);
 
   const fetchUserData = async () => {
-    try {
-      const response = await fetch('http://localhost:4000/api/user');
-      if (!response.ok) {
-        throw new Error('Failed to fetch user data');
+    const token = localStorage.getItem('token');
+    if (token) {
+      try {
+        const response = await axios.get('http://localhost:4000/api/user/me', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (response.data.success) {
+          setUser(response.data.user);
+          loadCartData(token);  // Load the cart for the logged-in user
+        } else {
+          setError('Failed to fetch user data');
+        }
+      } catch (err) {
+
       }
-      const userData = await response.json();
-      setUser(userData);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error fetching user data:', error);
-      setLoading(false);
     }
+    setLoading(false);
   };
 
   const handleLogin = (userData) => {
@@ -41,31 +56,36 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    localStorage.removeItem('token');
     setUser(null);
-    // Additional logout cleanup can go here
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  if (loading) return <div>Loading...</div>;
 
   return (
-    <>
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} setMenu={() => {}} onLogin={handleLogin} />}
-      <div className='app'>
-        <Navbar setShowLogin={setShowLogin} isAuthenticated={!!user} user={user} onLogout={handleLogout} />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Cart' element={<Cart />} />
-          <Route path='/Order' element={<PlaceOrder />} />
-          <Route path='/Sign in' element={<Signin />} />
-          <Route path='/about_us' element={<About_Us />} />
-          <Route path='/DogProducts' element={<DogProducts />} />
-          <Route path='/CatProducts' element={<CatProducts />} />
-        </Routes>
-      </div>
+    <div className='App'>
+      <Navbar
+        isAuthenticated={!!user}
+        user={user}
+        onLogout={handleLogout}
+        setShowLogin={setShowLogin}
+      />
+      {error && <div className="error-message">{error}</div>}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/DogProducts' element={<DogProducts />} />
+        <Route path='/CatProducts' element={<CatProducts />} />
+        <Route path='/About_Us' element={<About_Us />} />
+        <Route path='/signin' element={<Signin />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/Order' element={<PlaceOrder />} />
+        <Route path='/product/:id' element={<ProductDetails />} />
+        <Route path='/verify' element={<Verify/>} />
+        <Route path='/myorders' element={<MyOrders/>} />
+      </Routes>
       <Footer />
-    </>
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} onLogin={handleLogin} />}
+    </div>
   );
 };
 

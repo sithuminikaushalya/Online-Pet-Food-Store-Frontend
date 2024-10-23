@@ -1,0 +1,238 @@
+.cart {
+    margin-top: 120px;
+    margin-left: 20px;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.cart-items {
+    width: 100%; /* Ensure full width */
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1.2fr 0.5fr; /* Adjust column widths */
+    align-items: center;
+    color: #000000;
+    font-size: max(1vw, 12px);
+    font-weight: bold;
+    
+}
+
+.cart-items-title > :nth-child(1) { 
+    padding-left: 20px; /
+}
+.cart-items-title > :nth-child(2) { 
+    padding-left: 100px; /
+}
+.cart-items-title > :nth-child(5) { 
+    padding-left: 45px; /
+}
+.cart-items-title > :nth-child(6) { 
+    padding-right: 100px; /
+}
+.cart-items-title > :nth-child(3) { 
+    padding-left: 30px; /
+}
+.cart-items-title > :nth-child(4) { 
+    padding-left: 28px; 
+}
+
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1.2fr 0.5fr; /* Ensure column widths match */
+    align-items: center;
+    margin: 10px 0;
+    color: #000000;
+}
+
+.cart-items-item img {
+    width: 80px; /* Adjust size if needed */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-right: 10px; /* Space between image and text */
+}
+ 
+.cart-items-item hr {
+    grid-column: 1 / -1; /* Span all columns */
+    margin: 10px 0; /* Adjust spacing as needed */
+    border: none;
+    background-color: grey;
+    height:2px; /* Adjust line thickness */
+    width: calc(99% - 20px); /* Ensure full width minus padding */
+    margin-right: 20px; /* Space from the right edge */
+    box-sizing: border-box; /* Include margin in the element’s total width */
+    margin-left: 10px;
+}
+
+.cart-items-item .cross {
+    text-align: justify;
+    cursor: pointer;
+    color: red; /* Optional: make it more noticeable */
+}
+
+.cart-bottom {
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw, 20px);
+}
+
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+}
+
+.cart-total hr { margin: 10px 0; height: 1px; /* Adjust line thickness / background-color: grey; border: none; width: 100%; / Ensure full width / display: block; / Ensure it's a block-level element */ }
+
+.cart-total button {
+    width: 300px;
+    border: none;
+    background-color: #ffd700;
+    color: black;
+    padding: 1vw 2.3vw;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 500;
+    border: #000000 solid 2px;
+}
+
+.cart-total button:hover {
+    background-color: #eb9e34;
+    transition: 0.2s;
+}
+
+.quantity-input{
+  width: 80px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* StoreContext.css */
+
+/* Styles for the stock message popup */
+.message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    max-width: 400px;
+    text-align: center;
+    transition: smooth;
+}
+
+.message-popup-content {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.message-popup button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #66cc99;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-popup button:hover {
+    background-color: #66cc99;
+}
+
+
+
+
+@media(max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+}
+@media(max-width: 750px) {
+    .cart-items-title {
+        grid-template-columns: 1fr 1.2fr 1fr 1fr 1fr 0.3fr; /* Slightly adjust columns */
+        font-size: 11px; /* Adjust font size for better fit */
+    }
+
+    .cart-items-item {
+        grid-template-columns: 1fr 1.2fr 1fr 1fr 1fr 0.3fr; /* Match title grid */
+    }
+
+    .cart-items-item img {
+        width: 60px; /* Reduce image size */
+        height: 60px;
+    }
+
+    .cart-items-item hr {
+        margin: 5px 0;
+        height: 1px;
+        width: 100%; /* Full width */
+    }
+
+    .cart-bottom {
+        flex-direction: column-reverse; /* Stack on smaller screens */
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .cart-total {
+        width: 100%;
+        padding: 0 10px; /* Full width on smaller screens */
+    }
+
+    .cart-total button {
+        width: 100%; /* Full width for button */
+    }
+}
+
+/* Mobile view and below (max-width 480px) */
+@media(max-width: 480px) {
+    .cart-items-title {
+        grid-template-columns: 1fr 1fr 0.8fr 0.8fr 0.8fr 0.3fr; /* Adjust for small screens */
+        font-size: 10px;
+    }
+
+    .cart-items-item {
+        grid-template-columns: 1fr 1fr 0.8fr 0.8fr 0.8fr 0.3fr; /* Match title grid */
+    }
+
+    .cart-items-item img {
+        width: 50px; /* Further reduce image size */
+        height: 50px;
+    }
+
+    .cart-total button {
+        font-size: 13px; /* Adjust button text size */
+        padding: 10px 15px;
+    }
+    .cart-bottom {
+        margin: 5px; /* Minimal margin for small devices */
+    }
+    .cart-total {
+        padding: 0 5px; /* Minimal padding */
+        gap: 5px; /* Further reduce gap */
+    }
+ 
+}

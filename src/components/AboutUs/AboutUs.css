@@ -1,15 +1,14 @@
 .about-us-container {
     padding: 40px 20px;
-    max-width: auto; /* Consider setting a specific max-width if needed */
-    margin: 0 auto;
+    max-width: auto; 
     background-color: #003366;
   }
   
   .about-us-title {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 2.8em; /* Adjust font size as needed */
-    color: #ffffff; /* White color for the title */
+    font-size: 2.8em; 
+    color: #ffffff; 
   }
   
   .about-us-content {
@@ -37,9 +36,8 @@
     max-width: 50%;
   }
   .about-us-text p {
-    text-align: justify; /* Align paragraphs with justified text */
-    margin-bottom: 10px;
-    margin-right: 160px; /* Add space between paragraphs */
+    text-align: justify; 
+    margin-right: 160px; 
   }
   
   .about-us-text p {
@@ -67,3 +65,43 @@
         background-color: #eb9e34;
         transition: 0.2s;
     }
+
+     @media (max-width: 768px) {
+      .about-us-title {
+        font-size: 2em; /* Reduce title size for smaller screens */
+      }
+    
+      .about-us-text {
+        font-size: 1.2em;
+        max-width: 100%; /* Ensure text takes full width on smaller screens */
+      }
+    
+      .about-us-image {
+        max-width: 100%; /* Ensure image fits screen width */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .about-us-title {
+        font-size: 1.8em; /* Further reduce title size for mobile */
+      }
+    
+      .about-us-text {
+        font-size: 1.2em; 
+        max-width: 100%;
+        padding: 10px;
+      }
+    
+      .about-us-image {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+    
+      .about-us-container {
+        padding: 10px;
+      }
+    
+      .button {
+        width: 150px; /* Slightly smaller button on mobile */
+      }}

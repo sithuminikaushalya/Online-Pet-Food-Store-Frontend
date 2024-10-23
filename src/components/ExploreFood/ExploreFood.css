@@ -74,3 +74,32 @@ width: 180px;
     background-color: #eb9e34;
     transition: 0.2s;
 }
+@media (max-width: 768px) {
+    .ExploreFoodList {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .ExploreFoodListItems {
+      flex: 1 1 100%; /* Full width on mobile */
+    }
+  
+    .ExploreFoodListItems img {
+      max-width: 100%; /* Ensure images take full width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ExploreFood h1 {
+      font-size: 28px;
+    }
+  
+    .ExploreFoodListItems p {
+      font-size: 20px;
+    }
+  
+    .button2 {
+      padding: 3vw 6vw;
+      font-size: 12px;
+      width: 140px;
+    }
+  }

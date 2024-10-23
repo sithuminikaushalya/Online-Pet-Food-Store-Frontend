@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AboutUs.css';
-import { assets } from '../../assets/assets.js'; // Ensure correct path to assets
+import { assets } from '../../assets/assets.js'; 
 
 const AboutUs = () => {
   const navigate = useNavigate();
 
   const handleLearnMoreClick = () => {
     navigate('/about_us');
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0); 
   };
 
   return (

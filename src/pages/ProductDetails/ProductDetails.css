@@ -1,0 +1,166 @@
+.product-details {
+  padding: 40px 35px;
+  margin: auto;
+  text-align: center;
+  background-color: #ffffff; /* White background to make it look clean */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px;
+}
+
+.product-detail-content {
+  margin-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px; /* More space between image and details */
+}
+
+.product-image {
+  position: relative; /* Make the element relative to position the pseudo-element */
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure the pseudo-element stays within the bounds */
+}
+
+.product-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/catpaw.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.12; /* Set the opacity of the background image */
+  z-index: 1; /* Position it behind the image content */
+}
+
+.product-info {
+  flex: 1;
+  text-align: left;
+}
+
+.product-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Darker color for the title */
+}
+
+.product-description {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Improved readability */
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px; /* More space below price */
+}
+
+.quantity-container {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-container label {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.quantity-container input {
+  width: 80px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Add to Cart button */
+.add-to-cart-button {
+  width: 400px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  background-color: #ffd700; /* Matching the background color */
+  border: #000000 solid 2px; /* Matching the border */
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Smooth background color transition */
+  text-align: center;
+}
+
+.add-to-cart-button:hover {
+  background-color: #eb9e34; /* New hover color */
+}
+
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/* Out of Stock button */
+.out-of-stock-button {
+  width: 400px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  background-color: #ffd700; /* Matching the background color */
+  border: #000000 solid 2px; /* Matching the border */
+  border-radius: 40px;
+  text-align: center;
+}
+
+/* No hover effect for the Out of Stock button */
+.out-of-stock-button:hover {
+  background-color: #ffd700; /* Keep the same background on hover */
+}
+
+@media (max-width: 768px) {
+  .product-detail-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .product-image {
+    max-width: 90%; /* Reduce image size */
+  }
+
+  .product-info {
+    text-align: center; /* Center-align product info on smaller screens */
+  }
+
+  .add-to-cart-button {
+    width: 100%; /* Full-width button */
+  }
+}
+
+/* Mobile view (max-width 480px) */
+@media (max-width: 480px) {
+  .product-info h1 {
+    font-size: 1.8rem; /* Adjust title size for smaller screens */
+  }
+
+  .product-description {
+    font-size: 1rem; /* Adjust description size */
+  }
+
+  .add-to-cart-button {
+    font-size: 1rem; /* Adjust button text size */
+    padding: 10px 20px; /* Reduce padding for better fit */
+  }
+
+  .quantity-container label, .quantity-container input {
+    font-size: 0.9rem; /* Slightly reduce input size */
+  }
+}

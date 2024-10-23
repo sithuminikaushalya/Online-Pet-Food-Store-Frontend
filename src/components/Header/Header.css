@@ -22,8 +22,8 @@
   margin-top: -10px;
 }
 .Upper-side {
-  background-color: #f0f0f0f2; /* Set background color to white */
-  position: relative; /* Set relative positioning */
+  background-color: #f0f0f0f2; 
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,19 +43,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../../assets/catpaw.png') no-repeat center center; /* Background image */
-  background-size: cover; /* Cover the entire section */
-  opacity: 0.12; /* Set transparency level */
-  z-index: 0; /* Ensure the overlay is behind the text */
-  border-radius: 8px; /* Match the border-radius of the section */
+  background: url('../../assets/catpaw.png') no-repeat center center; 
+  background-size: cover; 
+  opacity: 0.12; 
+  z-index: 0; 
+  border-radius: 8px;
 }
 
 .Upper-side .description {
  
   flex: 1; 
-  font-weight: 600;/* Takes up remaining space */
+  font-weight: 600;
   padding: 20px;
-  text-align: center; /* Justify the paragraph */
+  text-align: center;
   font-size: 3.6em;
   margin-top: -10px;
   margin-bottom: 0px;
@@ -75,18 +75,18 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  align-items: center; /* Align items horizontally in the center */
-  text-align: center; /* Align text center for h1 */
+  align-items: center;
+  text-align: center; 
 }
 
 .Bottom-side h1 {
   font-size: 38px;
   color: #ffd700;
-  margin-bottom: 10px; /* Adjust margin as needed */
-  max-width: 70%; /* Set maximum width to control line length */
+  margin-bottom: 10px;
+  max-width: 70%;
   white-space: normal;
   margin-right: 360px;
-  margin-top: 60px; /* Allow text to wrap */
+  margin-top: 60px; 
 }
 
 .HomeBottomImg {
@@ -96,4 +96,93 @@
   position: absolute;
   bottom: -20px;
   right: 50px;
+}
+
+@media (max-width: 768px) {
+  .Header-content {
+    height: auto; /* Let the content determine the height */
+    padding: 20px;
+  }
+
+  .Headerimg {
+    margin-left: 0;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .Upper-side {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .Upper-side .description {
+    font-size: 2.4em;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .Upper-side p {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .Bottom-side h1 {
+    font-size: 30px;
+    margin-right: 0;
+    margin-top: 40px;
+  }
+
+  .HomeBottomImg {
+    height: 20%;
+    right: 20px;
+    bottom: -10px;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .Header-content {
+    height: auto;
+    padding: 10px;
+  }
+
+  .Headerimg {
+    max-width: 250px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .Upper-side {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .Upper-side .description {
+    font-size: 1.8em;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .Upper-side p {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .Bottom-side h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .HomeBottomImg {
+    height: 15%;
+    right: 10px;
+    bottom: 0;
+  }
 }

@@ -15,8 +15,6 @@ import Puppy10 from './Puppy10.png'
 import Puppy400 from './Puppy400.png'
 import Logo1 from './Logo1.jpg'
 import Logo2 from './Logo2.png'
-import Search from './Searchicon.jpg'
-import Search2 from './Searchicon2.jpg'
 import Carticon from './Carticon.png'
 import Carticon2 from './Carticon2.jpg'
 import Headerimg from './Headerimg.png'
@@ -37,6 +35,9 @@ import homebottom from './homebottom.png'
 import catproduct from './catproduct.png'
 import dogproduct from './dogproduct.png'
 import doggfood1 from './doggfood1.png'
+import parcelIcon from './parcelIcon.png'
+import order from './order.png'
+import noOrdersIcon from './noOrdersIcon.png'
 
 
 //import icons
@@ -59,10 +60,8 @@ export const assets = {
     Puppy10,
     Logo1,
     Logo2,
-    Search,
     Carticon,
     Carticon2,
-    Search2,
     Headerimg,
     cat,
     dog,
@@ -78,6 +77,9 @@ export const assets = {
     catproduct,
     dogproduct,
     doggfood1,
+    parcelIcon,
+    order,
+    noOrdersIcon
 }
 
 export const FoodTypes = [
@@ -87,34 +89,7 @@ export const FoodTypes = [
     },
     {
         FoodName: " For Cats",
-        FoodTypeImage: cat
-    }
+        FoodTypeImage: cat
+}
 
-]
-
-export const food_list = [
-    {
-        _id: "1",
-        name: "Dog Food 400g",
-        image: food1,
-        price: 1000,
-        description: "It is enriched with Crude Fiber to help with better digestion while Omega 3, Vitamin D and Calcium helps to maintain a higher immune system.",
-        category: "dog"
-    },
-    {
-        _id: "2",
-        name: "Dog Food 3kg",
-        image: food2,
-        price: 6000,
-        description: "It is enriched with Crude Fiber to help with better digestion while Omega 3, Vitamin D and Calcium helps to maintain a higher immune system.",
-        category: "dog"
-    },
-    {
-        _id: "3",
-        name: "Dog Food 10kg",
-        image: food2,
-        price: 10000,
-        description: "It is enriched with Crude Fiber to help with better digestion while Omega 3, Vitamin D and Calcium helps to maintain a higher immune system.",
-        category: "dog"
-    }
 ]
